@@ -13,6 +13,8 @@ Integrated Azure Speech cognitive service into Unreal Engine 4
     - [connect to Azure portal](#connect-to-azure-portal)      
 ***
 # How it works
+## Unreal Engine Python
+## Azure cognitive service : Speech
 ## Azure cognitive service : LUIS
 **python을 쓴 이유**
 
@@ -31,6 +33,20 @@ Integrated Azure Speech cognitive service into Unreal Engine 4
 
 ***
 # Getting Started
+## Azure ID 연결
+
+Azure cognitive services를 사용하기 위해서는 [Azure Portal](https://azure.microsoft.com/)에 로그인을 하고, `Speech` 리소스와 `LUIS` 리소스를 생성해야 합니다.
+ㄷㄷㄷㅈ 플러그인에서 speech 서비스를 사용하기 위해 필요한 것은 다음과 같습니다.
+
+ 1. 구독 키
+ 2. Speech Studio에서 엔드포인트 (Custom Speech 사용시)
+
+그리고 자연어처리 LUIS 서비스를 사용하기 위해 LUIS 포털에서 다음의 정보들이 필요합니다.
+
+ 1. App ID, Culture(=Target Language)
+ 2. Authoring Resources에서 Primary Key(=Authoring Key), Endpoint URL(=Authoring Endpoint)
+ 3. Predicition Resources에서 Primary Key(=Prediction Key), Endpoint URL(=Prediction Endpoint)
+
 ## 키보드 Blueprint 설명
 키보드는 C++로 만들어진 함수들과 언리얼엔진 블루프린트에서 만든 함수들로 구성된다.  C++로 만들어진 `Combine Hangeul Auto Line Break` 함수를 숫자 자판, 영어(또는 한글 자판), 기타 기호 자판(ex. '-', '?')들이 사용하고 나머지 자판들은 다른 함수들을 사용하여 구성된다.
 1. 숫자, 영어, 기타 기호 자판 구성
